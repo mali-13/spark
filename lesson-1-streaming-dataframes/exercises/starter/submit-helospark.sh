@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker exec -it spark_spark_1 /opt/bitnami/spark/bin/spark-submit  /home/workspace/lesson-1-streaming-dataframes/exercises/starter/hellospark.py | tee ../../../spark/logs/helo-spark.log
