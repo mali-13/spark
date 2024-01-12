@@ -1,22 +1,28 @@
 from pyspark.sql import SparkSession
 
-# TO-DO: create a variable with the absolute path to the text file
-# /home/workspace/walkthrough/exercises/starter/Test.txt
+# Create a variable with the absolute path to the text file
+text = "/home/workspace/lesson-1-streaming-dataframes/exercises/starter/Test.txt"
 
-# TO-DO: create a Spark session
+# Create a Spark session
+sparkSession = SparkSession.builder.appName("HelloSpark").getOrCreate()
 
-# TO-DO: set the log level to WARN
+# Set the log level to WARN
+sparkSession.sparkContext.setLogLevel('WARN')
 
-# TO-DO: using the Spark session variable, call the appropriate
-# function referencing the text file path to read the text file 
-
-# TO-DO: call the appropriate function to filter the data containing
-# the letter 'a', and then count the rows that were found
-
-# TO-DO: call the appropriate function to filter the data containing
-# the letter 'b', and then count the rows that were found
+# Using the Spark session variable, call the appropriate
+# function referencing the text file path to read the text file
+textData = sparkSession.read.text(text).cache()
 
 
-# TO-DO: print the count for letter 'd' and letter 's'
+# Create a global variable for number of times the letter a is found
+numAs = textData.filter(textData.value.contains('a')).count()
+# Create a global variable for number of times the letter b is found
+numBs = textData.filter(textData.value.contains('b')).count()
 
-# TO-DO: stop the spark application
+print("*******")
+print("*******")
+print("*****Lines with a: %i, lines with b: %i" % (numAs, numBs))
+print("*******")
+print("*******")
+
+sparkSession.stop()
