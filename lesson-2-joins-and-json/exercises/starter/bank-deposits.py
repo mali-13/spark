@@ -1,11 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, to_json, col, unbase64, base64, split, expr
-from pyspark.sql.types import (
-    StructField,
-    StructType,
-    StringType,
-    DoubleType
-)
+from pyspark.sql.types import StructField, StructType, StringType, DoubleType
 
 # Create a kafka message schema StructType including the following JSON elements:
 # {"accountNumber":"703934969","amount":415.94,"dateAndTime":"Sep 29, 2020, 10:06:23 AM"}
