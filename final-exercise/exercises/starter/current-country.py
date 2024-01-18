@@ -1,6 +1,13 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, to_json, col, unbase64, base64, split, expr
-from pyspark.sql.types import StructField, StructType, StringType, BooleanType, ArrayType, DateType
+from pyspark.sql.types import (
+    StructField,
+    StructType,
+    StringType,
+    BooleanType,
+    ArrayType,
+    DateType,
+)
 
 # this is a manually created schema - before Spark 3.0.0, schema inference is not automatic
 
@@ -9,58 +16,134 @@ redisMessageSchema = StructType(
         StructField("key", StringType()),
         StructField("value", StringType()),
         StructField("expiredType", StringType()),
-        StructField("expiredValue",StringType()),
+        StructField("expiredValue", StringType()),
         StructField("existType", StringType()),
         StructField("ch", StringType()),
-        StructField("incr",BooleanType()),
-        StructField("zSetEntries", ArrayType( \
-            StructType([
-                StructField("element", StringType()),\
-                StructField("score", StringType())   \
-            ]))                                      \
-        )
-
+        StructField("incr", BooleanType()),
+        StructField(
+            "zSetEntries",
+            ArrayType(
+                StructType(
+                    [
+                        StructField("element", StringType()),
+                        StructField("score", StringType()),
+                    ]
+                )
+            ),
+        ),
     ]
 )
 
-# TO-DO: create a StructType for the Customer schema for the following fields:
-# {"customerName":"Frank Aristotle","email":"Frank.Aristotle@test.com","phone":"7015551212","birthDay":"1948-01-01","accountNumber":"750271955","location":"Jordan"}
+# Create a StructType for the Customer schema for the following fields: {"customerName":"Frank Aristotle",
+# "email":"Frank.Aristotle@test.com","phone":"7015551212","birthDay":"1948-01-01","accountNumber":"750271955",
+# "location":"Jordan"}
+customerSchema = StructType(
+    [
+        StructField("customerName", StringType()),
+        StructField("email", StringType()),
+        StructField("phone", StringType()),
+        StructField("birthDay", StringType()),
+        StructField("accountNumber", StringType()),
+        StructField("location", StringType()),
+    ]
+)
 
-# TO-DO: create a StructType for the CustomerLocation schema for the following fields:
+# Create a StructType for the CustomerLocation schema for the following fields:
 # {"accountNumber":"814840107","location":"France"}
+locationSchema = StructType(
+    [StructField("accountNumber", StringType()), StructField("location", StringType())]
+)
 
-# TO-DO: create a spark session, with an appropriately named application name
+# Create a spark session, with an appropriately named application name
+sparkSession = SparkSession.builder.appName("current-country").getOrCreate()
 
-#TO-DO: set the log level to WARN
+# Set the log level to WARN
+sparkSession.sparkContext.setLogLevel("WARN")
 
-#TO-DO: read the redis-server kafka topic as a source into a streaming dataframe with the bootstrap server kafka:19092, configuring the stream to read the earliest messages possible                                    
+# Read the redis-server kafka topic as a source into a streaming dataframe with the bootstrap server kafka:19092,
+# configuring the stream to read the earliest messages possible
+redisRawDF = (
+    sparkSession.readStream.format("kafka")
+    .option("kafka.bootstrap.servers", "kafka:19092")
+    .option("subscribe", "redis-server")
+    .option("startingOffsets", "earliest")
+    .load()
+)
 
-#TO-DO: using a select expression on the streaming dataframe, cast the key and the value columns from kafka as strings, and then select them
+# Using a select expression on the streaming dataframe, cast the key and the value columns from kafka as strings,
+# and then select them
+redisDF = redisRawDF.selectExpr(
+    "cast(key as string) key", "cast(value as string) value"
+)
 
-#TO-DO: using the redisMessageSchema StructType, deserialize the JSON from the streaming dataframe 
+# Using the redisMessageSchema StructType, deserialize the JSON from the streaming dataframe
 
-# TO-DO: create a temporary streaming view called "RedisData" based on the streaming dataframe
+# Create a temporary streaming view called "RedisData" based on the streaming dataframe
 # it can later be queried with spark.sql
+redisDF.withColumn("value", from_json("value", redisMessageSchema)).select(
+    col("value.*")
+).createOrReplaceTempView("RedisData")
 
-#TO-DO: using spark.sql, select key, zSetEntries[0].element as redisEvent from RedisData
+# Using spark.sql, select key, zSetEntries[0].element as redisEvent from RedisData
+zSetEntriesEncodedDF = sparkSession.sql(
+    "select key, zSetEntries[0].element as redisEvent from RedisData"
+)
 
-#TO-DO: from the dataframe use the unbase64 function to select a column called redisEvent with the base64 decoded JSON, and cast it to a string
+# From the dataframe use the unbase64 function to select a column called redisEvent with the base64 decoded JSON,
+# and cast it to a string
+zSetEntriesDecodedDF1 = zSetEntriesEncodedDF.withColumn(
+    "redisEvent", unbase64("redisEvent").cast("string")
+)
 
-#TO-DO: repeat this a second time, so now you have two separate dataframes that contain redisEvent data
+# Repeat this a second time, so now you have two separate dataframes that contain redisEvent data
+zSetEntriesDecodedDF2 = zSetEntriesEncodedDF.withColumn(
+    "redisEvent", unbase64("redisEvent").cast("string")
+)
 
-#TO-DO: using the customer StructType, deserialize the JSON from the first redis decoded streaming dataframe, selecting column customer.* as a temporary view called Customer 
+# Filter DF1 for only those that contain the birthDay field (customer record)
+zSetEntriesDecodedDF1.filter(col("redisEvent").contains("birthDay"))
 
-#TO-DO: using the customer location StructType, deserialize the JSON from the second redis decoded streaming dataframe, selecting column customerLocation.* as a temporary view called CustomerLocation 
+# Filter DF2 for only those that contain the location field, we will filter
+# out null rows later
+zSetEntriesDecodedDF2.filter(col("redisEvent").contains("location"))
 
-#TO-DO: using spark.sql select accountNumber as customerAccountNumber, location as homeLocation, birthDay from Customer where birthDay is not null
+# Using the customer StructType, deserialize the JSON from the first redis decoded streaming dataframe,
+# selecting column customer.* as a temporary view called Customer
+zSetEntriesDecodedDF1.withColumn(
+    "customer", from_json("redisEvent", customerSchema)
+).select("customer.*").createOrReplaceTempView("Customer")
 
-#TO-DO: select the customerAccountNumber, homeLocation, and birth year (using split)
+# Using the customer location StructType, deserialize the JSON from the second redis decoded streaming dataframe,
+# selecting column customerLocation.* as a temporary view called CustomerLocation
+zSetEntriesDecodedDF2.withColumn(
+    "customerLocation", from_json("redisEvent", locationSchema)
+).select(col("customerLocation.*")).createOrReplaceTempView("CustomerLocation")
 
-#TO-DO: using spark.sql select accountNumber as locationAccountNumber, and location
+# Using spark.sql select accountNumber as customerAccountNumber, location as homeLocation, birthDay from Customer
+# where birthDay is not null
+customerCompleteDF = sparkSession.sql(
+    "select accountNumber as customerAccountNumber, location as homeLocation, birthDay from Customer "
+    "where birthDay is not null"
+)
 
-#TO-DO: join the customer and customer location data using the expression: customerAccountNumber = locationAccountNumber
+# Select the customerAccountNumber, homeLocation, and birth year (using split)
+customerDF = customerCompleteDF.select(
+    "customerAccountNumber",
+    "homeLocation",
+    split("birthDay", "-").getItem(0).alias("birthYear"),
+)
 
-# TO-DO: write the stream to the console, and configure it to run indefinitely
+# Using spark.sql select accountNumber as locationAccountNumber, and location
+customerLocationDF = sparkSession.sql(
+    "select accountNumber as locationAccountNumber, location from CustomerLocation"
+)
+
+# Join the customer and customer location data using the expression: customerAccountNumber = locationAccountNumber
+currentAndHomeLocationDF = customerLocationDF.join(
+    customerDF, expr("customerAccountNumber = locationAccountNumber")
+)
+
+# Write the stream to the console, and configure it to run indefinitely
 # can you find the customer(s) who are traveling out of their home countries?
 # When calling the customer, customer service will use their birth year to help
 # establish their identity, to reduce the risk of fraudulent transactions.
@@ -78,3 +161,6 @@ redisMessageSchema = StructType(
 # |            277678857|  Indonesia|            277678857|   Indonesia|     1937|
 # |            402412203|   DR Congo|            402412203|    DR Congo|     1945|
 # +---------------------+-----------+---------------------+------------+---------+
+currentAndHomeLocationDF.writeStream.format("console").outputMode(
+    "append"
+).start().awaitTermination()
