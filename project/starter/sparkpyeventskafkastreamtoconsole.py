@@ -10,7 +10,7 @@ from pyspark.sql.types import (
 
 # Create a StructType for the Kafka stedi-events topic which has the Customer Risk JSON that comes from Redis- before
 # Spark 3.0.0, schema inference is not automatic
-seniorRiskSchema = StructType(
+stediEventSchema = StructType(
     [
         StructField("customer", StringType()),
         StructField("score", FloatType()),
@@ -24,7 +24,7 @@ sparkSession.sparkContext.setLogLevel("WARN")
 # Using the spark application object, read a streaming dataframe from the Kafka topic stedi-events as the source Be
 # sure to specify the option that reads all the events from the topic including those that were published before you
 # started the spark stream
-seniorRiskRawDF = (
+stediEventRawDF = (
     sparkSession.readStream.format("kafka")
     .option("kafka.bootstrap.servers", "kafka:19092")
     .option("subscribe", "stedi-events")
@@ -33,7 +33,7 @@ seniorRiskRawDF = (
 )
 
 # Cast the value column in the streaming dataframe as a STRING
-seniorRiskDF = seniorRiskRawDF.selectExpr("cast(value as string) value")
+stediEventDF = stediEventRawDF.selectExpr("cast(value as string) value")
 
 # Parse the JSON from the single column "value" with a json object in it, like this:
 # +------------+
@@ -51,7 +51,7 @@ seniorRiskDF = seniorRiskRawDF.selectExpr("cast(value as string) value")
 #
 # storing them in a temporary view called CustomerRisk
 #
-seniorRiskDF.withColumn("value", from_json("value", seniorRiskSchema)).select(
+stediEventDF.withColumn("value", from_json("value", stediEventSchema)).select(
     col("value.*")
 ).createOrReplaceTempView("CustomerRisk")
 
