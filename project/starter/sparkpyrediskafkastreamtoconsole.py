@@ -45,16 +45,6 @@ customerSchema = StructType(
     ]
 )
 
-# Create a StructType for the Kafka stedi-events topic which has the Customer Risk JSON that comes from Redis- before
-# Spark 3.0.0, schema inference is not automatic
-seniorRiskSchema = StructType(
-    [
-        StructField("customer", StringType()),
-        StructField("score", FloatType()),
-        StructField("riskDate", DateType()),
-    ]
-)
-
 # Create a spark application object
 sparkSession = SparkSession.builder.appName("stedi").getOrCreate()
 
