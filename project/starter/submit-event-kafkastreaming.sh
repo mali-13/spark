@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker exec -it spark_spark_1 /opt/bitnami/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 /home/workspace/project/starter/sparkpyeventskafkastreamtoconsole.py | tee ../../spark/logs/eventstream.log
+sudo docker exec -it spark_spark_1 /opt/bitnami/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 /home/workspace/project/starter/sparkpyeventskafkastreamtoconsole.py | tee -a ../../spark/logs/stedi.log
