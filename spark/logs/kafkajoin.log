@@ -1,0 +1,344 @@
+08:13:22.42
+ 08:13:22.42 Welcome to the Bitnami spark container
+ 08:13:22.42 Subscribe to project updates by watching https://github.com/bitnami/bitnami-docker-spark
+ 08:13:22.42 Submit issues and feature requests at https://github.com/bitnami/bitnami-docker-spark/issues
+ 08:13:22.43
+ 08:13:22.43 INFO  ==> ** Starting Spark setup **
+realpath: /bitnami/spark/conf: No such file or directory
+ 08:13:22.51 INFO  ==> Generating Spark configuration file...
+ 08:13:22.51 INFO  ==> ** Spark setup finished! **
+
+ 08:13:22.57 INFO  ==> ** Starting Spark in master mode **
+starting org.apache.spark.deploy.master.Master, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.master.Master-1-3fb5f9210e00.out
+Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host 3fb5f9210e00 --port 7077 --webui-port 8080
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/01/19 08:13:25 INFO Master: Started daemon with process name: 60@3fb5f9210e00
+24/01/19 08:13:25 INFO SignalUtils: Registering signal handler for TERM
+24/01/19 08:13:25 INFO SignalUtils: Registering signal handler for HUP
+24/01/19 08:13:25 INFO SignalUtils: Registering signal handler for INT
+24/01/19 08:13:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/01/19 08:13:27 INFO SecurityManager: Changing view acls to: spark
+24/01/19 08:13:27 INFO SecurityManager: Changing modify acls to: spark
+24/01/19 08:13:27 INFO SecurityManager: Changing view acls groups to:
+24/01/19 08:13:27 INFO SecurityManager: Changing modify acls groups to:
+24/01/19 08:13:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+24/01/19 08:13:28 INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+24/01/19 08:13:28 INFO Master: Starting Spark master at spark://3fb5f9210e00:7077
+24/01/19 08:13:28 INFO Master: Running Spark version 3.2.1
+24/01/19 08:13:29 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+24/01/19 08:13:29 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://3fb5f9210e00:8080
+24/01/19 08:13:30 INFO Master: I have been elected leader! New state: ALIVE
+24/01/19 08:13:30 INFO Master: Registering worker 172.23.0.3:34047 with 1 cores, 1024.0 MiB RAM
+ 13:59:35.44
+ 13:59:35.44 Welcome to the Bitnami spark container
+ 13:59:35.44 Subscribe to project updates by watching https://github.com/bitnami/bitnami-docker-spark
+ 13:59:35.44 Submit issues and feature requests at https://github.com/bitnami/bitnami-docker-spark/issues
+ 13:59:35.44
+ 13:59:35.44 INFO  ==> ** Starting Spark setup **
+realpath: /bitnami/spark/conf: No such file or directory
+ 13:59:35.48 INFO  ==> Detected mounted configuration file...
+ 13:59:35.48 INFO  ==> ** Spark setup finished! **
+
+ 13:59:35.50 INFO  ==> ** Starting Spark in master mode **
+starting org.apache.spark.deploy.master.Master, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.master.Master-1-3fb5f9210e00.out
+Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host 3fb5f9210e00 --port 7077 --webui-port 8080
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/01/22 13:59:37 INFO Master: Started daemon with process name: 44@3fb5f9210e00
+24/01/22 13:59:37 INFO SignalUtils: Registering signal handler for TERM
+24/01/22 13:59:37 INFO SignalUtils: Registering signal handler for HUP
+24/01/22 13:59:37 INFO SignalUtils: Registering signal handler for INT
+24/01/22 13:59:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/01/22 13:59:38 INFO SecurityManager: Changing view acls to: spark
+24/01/22 13:59:38 INFO SecurityManager: Changing modify acls to: spark
+24/01/22 13:59:38 INFO SecurityManager: Changing view acls groups to:
+24/01/22 13:59:38 INFO SecurityManager: Changing modify acls groups to:
+24/01/22 13:59:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+24/01/22 13:59:39 INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+24/01/22 13:59:40 INFO Master: Starting Spark master at spark://3fb5f9210e00:7077
+24/01/22 13:59:40 INFO Master: Running Spark version 3.2.1
+24/01/22 13:59:40 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+24/01/22 13:59:40 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://3fb5f9210e00:8080
+24/01/22 13:59:41 INFO Master: I have been elected leader! New state: ALIVE
+24/01/22 13:59:41 INFO Master: Registering worker 172.23.0.4:40537 with 1 cores, 1024.0 MiB RAM
+
+ 08:13:22.71
+ 08:13:22.71 Welcome to the Bitnami spark container
+ 08:13:22.71 Subscribe to project updates by watching https://github.com/bitnami/bitnami-docker-spark
+ 08:13:22.72 Submit issues and feature requests at https://github.com/bitnami/bitnami-docker-spark/issues
+ 08:13:22.72
+ 08:13:22.72 INFO  ==> ** Starting Spark setup **
+realpath: /bitnami/spark/conf: No such file or directory
+ 08:13:22.84 INFO  ==> Generating Spark configuration file...
+ 08:13:22.84 INFO  ==> ** Spark setup finished! **
+
+ 08:13:22.87 INFO  ==> ** Starting Spark in worker mode **
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.worker.Worker-1-f41e72f758c3.out
+Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://spark:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/01/19 08:13:25 INFO Worker: Started daemon with process name: 58@f41e72f758c3
+24/01/19 08:13:25 INFO SignalUtils: Registering signal handler for TERM
+24/01/19 08:13:25 INFO SignalUtils: Registering signal handler for HUP
+24/01/19 08:13:25 INFO SignalUtils: Registering signal handler for INT
+24/01/19 08:13:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/01/19 08:13:27 INFO SecurityManager: Changing view acls to: spark
+24/01/19 08:13:27 INFO SecurityManager: Changing modify acls to: spark
+24/01/19 08:13:27 INFO SecurityManager: Changing view acls groups to:
+24/01/19 08:13:27 INFO SecurityManager: Changing modify acls groups to:
+24/01/19 08:13:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+24/01/19 08:13:28 INFO Utils: Successfully started service 'sparkWorker' on port 34047.
+24/01/19 08:13:28 INFO Worker: Worker decommissioning not enabled.
+24/01/19 08:13:29 INFO Worker: Starting Spark worker 172.23.0.3:34047 with 1 cores, 1024.0 MiB RAM
+24/01/19 08:13:29 INFO Worker: Running Spark version 3.2.1
+24/01/19 08:13:29 INFO Worker: Spark home: /opt/bitnami/spark
+24/01/19 08:13:29 INFO ResourceUtils: ==============================================================
+24/01/19 08:13:29 INFO ResourceUtils: No custom resources configured for spark.worker.
+24/01/19 08:13:29 INFO ResourceUtils: ==============================================================
+24/01/19 08:13:30 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+24/01/19 08:13:30 INFO WorkerWebUI: Bound WorkerWebUI to 0.0.0.0, and started at http://f41e72f758c3:8081
+24/01/19 08:13:30 INFO Worker: Connecting to master spark:7077...
+24/01/19 08:13:30 INFO TransportClientFactory: Successfully created connection to spark/172.23.0.2:7077 after 112 ms (0 ms spent in bootstraps)
+24/01/19 08:13:30 INFO Worker: Successfully registered with master spark://3fb5f9210e00:7077
+ 13:59:35.43
+ 13:59:35.44 Welcome to the Bitnami spark container
+ 13:59:35.44 Subscribe to project updates by watching https://github.com/bitnami/bitnami-docker-spark
+ 13:59:35.44 Submit issues and feature requests at https://github.com/bitnami/bitnami-docker-spark/issues
+ 13:59:35.44
+ 13:59:35.44 INFO  ==> ** Starting Spark setup **
+realpath: /bitnami/spark/conf: No such file or directory
+ 13:59:35.48 INFO  ==> Detected mounted configuration file...
+ 13:59:35.48 INFO  ==> ** Spark setup finished! **
+
+ 13:59:35.50 INFO  ==> ** Starting Spark in worker mode **
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.worker.Worker-1-f41e72f758c3.out
+Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://spark:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/01/22 13:59:37 INFO Worker: Started daemon with process name: 42@f41e72f758c3
+24/01/22 13:59:37 INFO SignalUtils: Registering signal handler for TERM
+24/01/22 13:59:37 INFO SignalUtils: Registering signal handler for HUP
+24/01/22 13:59:37 INFO SignalUtils: Registering signal handler for INT
+24/01/22 13:59:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/01/22 13:59:38 INFO SecurityManager: Changing view acls to: spark
+24/01/22 13:59:38 INFO SecurityManager: Changing modify acls to: spark
+24/01/22 13:59:38 INFO SecurityManager: Changing view acls groups to:
+24/01/22 13:59:38 INFO SecurityManager: Changing modify acls groups to:
+24/01/22 13:59:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+24/01/22 13:59:39 INFO Utils: Successfully started service 'sparkWorker' on port 40537.
+24/01/22 13:59:39 INFO Worker: Worker decommissioning not enabled.
+24/01/22 13:59:40 INFO Worker: Starting Spark worker 172.23.0.4:40537 with 1 cores, 1024.0 MiB RAM
+24/01/22 13:59:40 INFO Worker: Running Spark version 3.2.1
+24/01/22 13:59:40 INFO Worker: Spark home: /opt/bitnami/spark
+24/01/22 13:59:40 INFO ResourceUtils: ==============================================================
+24/01/22 13:59:40 INFO ResourceUtils: No custom resources configured for spark.worker.
+24/01/22 13:59:40 INFO ResourceUtils: ==============================================================
+24/01/22 13:59:40 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+24/01/22 13:59:40 INFO WorkerWebUI: Bound WorkerWebUI to 0.0.0.0, and started at http://f41e72f758c3:8081
+24/01/22 13:59:40 INFO Worker: Connecting to master spark:7077...
+24/01/22 13:59:41 INFO TransportClientFactory: Successfully created connection to spark/172.23.0.5:7077 after 99 ms (0 ms spent in bootstraps)
+24/01/22 13:59:41 INFO Worker: Successfully registered with master spark://3fb5f9210e00:7077
+
+
+
+:: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-f3fd66bb-9676-43d6-b271-24487b0997c1;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.1 in central
+	found org.apache.kafka#kafka-clients;2.8.0 in central
+	found org.lz4#lz4-java;1.7.1 in central
+	found org.xerial.snappy#snappy-java;1.1.8.4 in central
+	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.1 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.1 in central
+	found org.apache.htrace#htrace-core4;4.1.0-incubating in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.6.2 in central
+:: resolution report :: resolve 507ms :: artifacts dl 15ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.6.2 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.1 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.1 from central in [default]
+	org.apache.htrace#htrace-core4;4.1.0-incubating from central in [default]
+	org.apache.kafka#kafka-clients;2.8.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.1 from central in [default]
+	org.lz4#lz4-java;1.7.1 from central in [default]
+	org.slf4j#slf4j-api;1.7.30 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.8.4 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-f3fd66bb-9676-43d6-b271-24487b0997c1
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/9ms)
+24/01/22 14:10:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/01/22 14:10:33 INFO SparkContext: Running Spark version 3.2.1
+24/01/22 14:10:33 INFO ResourceUtils: ==============================================================
+24/01/22 14:10:33 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/01/22 14:10:33 INFO ResourceUtils: ==============================================================
+24/01/22 14:10:33 INFO SparkContext: Submitted application: stedi-streaming-app
+24/01/22 14:10:33 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/01/22 14:10:33 INFO ResourceProfile: Limiting resource is cpu
+24/01/22 14:10:33 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/01/22 14:10:33 INFO SecurityManager: Changing view acls to: root
+24/01/22 14:10:33 INFO SecurityManager: Changing modify acls to: root
+24/01/22 14:10:33 INFO SecurityManager: Changing view acls groups to: 
+24/01/22 14:10:33 INFO SecurityManager: Changing modify acls groups to: 
+24/01/22 14:10:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+24/01/22 14:10:33 INFO Utils: Successfully started service 'sparkDriver' on port 38007.
+24/01/22 14:10:33 INFO SparkEnv: Registering MapOutputTracker
+24/01/22 14:10:33 INFO SparkEnv: Registering BlockManagerMaster
+24/01/22 14:10:33 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/01/22 14:10:33 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/01/22 14:10:34 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/01/22 14:10:34 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-799789f7-cc00-49d6-854d-89fce8cd8419
+24/01/22 14:10:34 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/01/22 14:10:34 INFO SparkEnv: Registering OutputCommitCoordinator
+24/01/22 14:10:34 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/01/22 14:10:34 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://3fb5f9210e00:4040
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar at spark://3fb5f9210e00:38007/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar at spark://3fb5f9210e00:38007/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar at spark://3fb5f9210e00:38007/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://3fb5f9210e00:38007/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at spark://3fb5f9210e00:38007/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://3fb5f9210e00:38007/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar at spark://3fb5f9210e00:38007/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at spark://3fb5f9210e00:38007/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at spark://3fb5f9210e00:38007/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at spark://3fb5f9210e00:38007/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar at spark://3fb5f9210e00:38007/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar at spark://3fb5f9210e00:38007/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://3fb5f9210e00:38007/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar at file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar at file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar at file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.kafka_kafka-clients-2.8.0.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/com.google.code.findbugs_jsr305-3.0.0.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.commons_commons-pool2-2.6.2.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.spark-project.spark_unused-1.0.0.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at file:///root/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.lz4_lz4-java-1.7.1.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.xerial.snappy_snappy-java-1.1.8.4.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.slf4j_slf4j-api-1.7.30.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar at file:///root/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+24/01/22 14:10:34 INFO SparkContext: Added file file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Copying /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/commons-logging_commons-logging-1.1.3.jar
+24/01/22 14:10:34 INFO Executor: Starting executor ID driver on host 3fb5f9210e00
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.commons_commons-pool2-2.6.2.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/commons-logging_commons-logging-1.1.3.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.lz4_lz4-java-1.7.1.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.spark-project.spark_unused-1.0.0.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/com.google.code.findbugs_jsr305-3.0.0.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.kafka_kafka-clients-2.8.0.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.xerial.snappy_snappy-java-1.1.8.4.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.slf4j_slf4j-api-1.7.30.jar
+24/01/22 14:10:34 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO TransportClientFactory: Successfully created connection to 3fb5f9210e00/172.23.0.5:38007 after 34 ms (0 ms spent in bootstraps)
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1688128048534356027.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1688128048534356027.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.xerial.snappy_snappy-java-1.1.8.4.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.xerial.snappy_snappy-java-1.1.8.4.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp9125206950166715203.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp9125206950166715203.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/commons-logging_commons-logging-1.1.3.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/commons-logging_commons-logging-1.1.3.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1724819439762578685.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1724819439762578685.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.spark-project.spark_unused-1.0.0.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.spark-project.spark_unused-1.0.0.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp617010518769290129.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp617010518769290129.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-api-3.3.1.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp927423403459147803.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp927423403459147803.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1390680009520022208.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1390680009520022208.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.slf4j_slf4j-api-1.7.30.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.slf4j_slf4j-api-1.7.30.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp324284414865324250.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp324284414865324250.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.lz4_lz4-java-1.7.1.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.lz4_lz4-java-1.7.1.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.kafka_kafka-clients-2.8.0.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp7207020021421099013.tmp
+24/01/22 14:10:34 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp7207020021421099013.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.kafka_kafka-clients-2.8.0.jar
+24/01/22 14:10:34 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.kafka_kafka-clients-2.8.0.jar to class loader
+24/01/22 14:10:34 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1705932633577
+24/01/22 14:10:34 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1162961207113615076.tmp
+24/01/22 14:10:35 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp1162961207113615076.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+24/01/22 14:10:35 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to class loader
+24/01/22 14:10:35 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1705932633577
+24/01/22 14:10:35 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp9033311047894359999.tmp
+24/01/22 14:10:35 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp9033311047894359999.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+24/01/22 14:10:35 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to class loader
+24/01/22 14:10:35 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1705932633577
+24/01/22 14:10:35 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp3998567619184983658.tmp
+24/01/22 14:10:35 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp3998567619184983658.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.commons_commons-pool2-2.6.2.jar
+24/01/22 14:10:35 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.commons_commons-pool2-2.6.2.jar to class loader
+24/01/22 14:10:35 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1705932633577
+24/01/22 14:10:35 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp5136012422101109171.tmp
+24/01/22 14:10:35 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp5136012422101109171.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/com.google.code.findbugs_jsr305-3.0.0.jar
+24/01/22 14:10:35 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/com.google.code.findbugs_jsr305-3.0.0.jar to class loader
+24/01/22 14:10:35 INFO Executor: Fetching spark://3fb5f9210e00:38007/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1705932633577
+24/01/22 14:10:35 INFO Utils: Fetching spark://3fb5f9210e00:38007/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp5242852018999881361.tmp
+24/01/22 14:10:35 INFO Utils: /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/fetchFileTemp5242852018999881361.tmp has been previously copied to /tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+24/01/22 14:10:35 INFO Executor: Adding file:/tmp/spark-cb754820-a161-4fed-9760-c01ba5f66bef/userFiles-1e25a8f2-2648-4d56-89fa-d1276fa13060/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to class loader
+24/01/22 14:10:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37191.
+24/01/22 14:10:35 INFO NettyBlockTransferService: Server created on 3fb5f9210e00:37191
+24/01/22 14:10:35 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/01/22 14:10:35 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 3fb5f9210e00, 37191, None)
+24/01/22 14:10:35 INFO BlockManagerMasterEndpoint: Registering block manager 3fb5f9210e00:37191 with 366.3 MiB RAM, BlockManagerId(driver, 3fb5f9210e00, 37191, None)
+24/01/22 14:10:35 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 3fb5f9210e00, 37191, None)
+24/01/22 14:10:35 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 3fb5f9210e00, 37191, None)
+24/01/22 14:10:35 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/01/22 14:10:35 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+24/01/22 14:10:38 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/01/22 14:10:42 WARN HDFSBackedStateStoreProvider: The state for version 18 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+24/01/22 14:10:42 WARN HDFSBackedStateStoreProvider: The state for version 18 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
